@@ -69,16 +69,9 @@ const TestimonialsSection = () => {
               </p>
 
               {/* Author */}
-              <div className="flex items-center gap-4">
-                <img
-                  src={testimonial.avatar}
-                  alt={testimonial.name}
-                  className="w-14 h-14 rounded-full object-cover ring-2 ring-primary/20"
-                />
-                <div>
-                  <p className="font-display font-bold">{testimonial.name}</p>
-                  <p className="text-sm text-muted-foreground">{testimonial.role}</p>
-                </div>
+              <div>
+                <p className="font-display font-bold">{testimonial.name}</p>
+                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
               </div>
             </div>
           ))}

@@ -6,7 +6,7 @@ import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import RestaurantsSection from "@/components/sections/RestaurantsSection";
 import TrackingSection from "@/components/sections/TrackingSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
-import AdminSection from "@/components/sections/AdminSection";
+import ConnectSection from "@/components/sections/ConnectSection";
 import CTASection from "@/components/sections/CTASection";
 
 const Index = () => {
@@ -20,7 +20,7 @@ const Index = () => {
         <RestaurantsSection />
         <TrackingSection />
         <TestimonialsSection />
-        <AdminSection />
+        <ConnectSection />
         <CTASection />
       </main>
       <Footer />
