@@ -100,6 +100,22 @@ export default {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" },
         },
+        "float-up": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-18px)" },
+        },
+        "sway": {
+          "0%, 100%": { transform: "rotate(0deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        "ribbon-wave": {
+          "0%, 100%": { transform: "translateX(0) rotate(0deg)" },
+          "50%": { transform: "translateX(6px) rotate(2deg)" },
+        },
+        "confetti-fall": {
+          "0%": { transform: "translateY(-10px) rotate(0deg)", opacity: "1" },
+          "100%": { transform: "translateY(100vh) rotate(720deg)", opacity: "0" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -108,6 +124,9 @@ export default {
         "fade-in": "fade-in 0.4s ease-out forwards",
         "scale-in": "scale-in 0.3s ease-out forwards",
         "slide-in-right": "slide-in-right 0.5s ease-out forwards",
+        "float-up": "float-up 4s ease-in-out infinite",
+        "sway": "sway 3s ease-in-out infinite",
+        "ribbon-wave": "ribbon-wave 3s ease-in-out infinite",
       },
       boxShadow: {
         glow: "0 0 40px hsl(25 95% 53% / 0.3)",
