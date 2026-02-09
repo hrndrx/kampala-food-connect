@@ -115,19 +115,6 @@ const TrackingSection = () => {
                 </div>
               </div>
 
-              {/* Order Info Overlay */}
-              <div className="absolute bottom-10 left-10 right-10 bg-card/95 backdrop-blur rounded-2xl p-5 shadow-lg">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm text-muted-foreground">Your rider</p>
-                    <p className="font-display font-bold text-card-foreground">John Mugisha</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="text-sm text-muted-foreground">Arriving in</p>
-                    <p className="font-display font-bold text-primary text-xl">8 min</p>
-                  </div>
-                </div>
-              </div>
             </div>
 
             {/* Decorative Elements */}
