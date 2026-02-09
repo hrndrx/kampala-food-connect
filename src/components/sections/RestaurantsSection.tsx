@@ -39,24 +39,6 @@ const restaurants = [
     image: "https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop",
     featured: false,
   },
-  {
-    id: 5,
-    name: "The Bistro",
-    cuisine: "European • Italian",
-    rating: 4.7,
-    deliveryTime: "30-40 min",
-    image: "https://images.unsplash.com/photo-1559339352-11d035aa65de?w=400&h=300&fit=crop",
-    featured: true,
-  },
-  {
-    id: 6,
-    name: "Rolex Point",
-    cuisine: "Street Food • Local",
-    rating: 4.5,
-    deliveryTime: "15-25 min",
-    image: "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
-    featured: false,
-  },
 ];
 
 const RestaurantsSection = () => {
@@ -79,7 +61,7 @@ const RestaurantsSection = () => {
         </div>
 
         {/* Restaurant Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {restaurants.map((restaurant) => (
             <Link 
               key={restaurant.id} 
