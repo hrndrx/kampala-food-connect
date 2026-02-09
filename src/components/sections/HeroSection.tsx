@@ -2,20 +2,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, MapPin, Star } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-food.jpg";
-import PennantFlags from "@/components/decorations/PennantFlags";
-import Balloons from "@/components/decorations/Balloons";
-import Ribbons from "@/components/decorations/Ribbons";
-import GrandOpeningBadge from "@/components/decorations/GrandOpeningBadge";
 
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Pennant Flags */}
-      <PennantFlags />
-      {/* Balloons */}
-      <Balloons />
-      {/* Ribbons */}
-      <Ribbons />
       {/* Background Gradient */}
       <div className="absolute inset-0 bg-gradient-hero" />
       
@@ -27,9 +17,6 @@ const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="space-y-8 text-center lg:text-left">
-            {/* Grand Opening Badge */}
-            <GrandOpeningBadge />
-
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-medium text-sm animate-fade-in">
               <Clock size={16} />
