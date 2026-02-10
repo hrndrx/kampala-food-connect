@@ -4,7 +4,6 @@ import HeroSection from "@/components/sections/HeroSection";
 import UserTypesSection from "@/components/sections/UserTypesSection";
 import HowItWorksSection from "@/components/sections/HowItWorksSection";
 import RestaurantsSection from "@/components/sections/RestaurantsSection";
-import TrackingSection from "@/components/sections/TrackingSection";
 import CTASection from "@/components/sections/CTASection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ConnectSection from "@/components/sections/ConnectSection";
@@ -25,7 +24,7 @@ const Index = () => {
         <UserTypesSection />
         <HowItWorksSection />
         <RestaurantsSection />
-        <TrackingSection />
+        <TestimonialsSection />
         <TestimonialsSection />
         <ConnectSection />
       </main>
