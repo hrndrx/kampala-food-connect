@@ -1,3 +1,5 @@
+import { useState, useEffect } from "react";
+
 const Balloon = ({ color, style, delay }: { color: "orange" | "black"; style: React.CSSProperties; delay: number }) => {
   const fill = color === "orange" ? "hsl(var(--primary))" : "hsl(var(--foreground))";
   const highlight = color === "orange" ? "hsl(var(--primary-foreground) / 0.3)" : "hsl(0 0% 40% / 0.3)";
@@ -27,8 +29,24 @@ const Balloon = ({ color, style, delay }: { color: "orange" | "black"; style: Re
 };
 
 const Balloons = () => {
+  const [opacity, setOpacity] = useState(1);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const fadeStart = 100;
+      const fadeEnd = 600;
+      const newOpacity = Math.max(0, 1 - (scrollY - fadeStart) / (fadeEnd - fadeStart));
+      setOpacity(scrollY < fadeStart ? 1 : newOpacity);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  if (opacity <= 0) return null;
+
   return (
-    <div className="fixed inset-0 z-[55] pointer-events-none overflow-hidden">
+    <div className="fixed inset-0 z-[55] pointer-events-none overflow-hidden transition-opacity duration-150" style={{ opacity }}>
       {/* Left side balloons */}
       <Balloon color="orange" style={{ left: "2%", top: "15%" }} delay={0} />
       <Balloon color="black" style={{ left: "1%", top: "25%" }} delay={0.8} />
