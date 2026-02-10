@@ -43,7 +43,7 @@ const restaurants = [
 
 const RestaurantsSection = () => {
   return (
-    <section className="py-24 bg-background">
+    <section id="restaurants" className="py-24 bg-background">
       <div className="container mx-auto">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">

@@ -1,18 +1,35 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "Restaurants", href: "/restaurants" },
-    { name: "How It Works", href: "/#how-it-works" },
-    { name: "Track Order", href: "/track" },
+    { name: "Restaurants", href: "#restaurants" },
+    { name: "How It Works", href: "#how-it-works" },
   ];
+
+  const handleNavClick = (e: React.MouseEvent, href: string) => {
+    if (href.startsWith("#")) {
+      e.preventDefault();
+      const id = href.replace("#", "");
+      if (location.pathname !== "/") {
+        navigate("/");
+        setTimeout(() => {
+          document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      } else {
+        document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+    setIsOpen(false);
+  };
 
   return (
     <nav className="fixed top-8 left-0 right-0 z-50 glass">
@@ -26,13 +43,14 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <Link
+              <a
                 key={link.name}
-                to={link.href}
-                className="text-foreground/80 hover:text-primary font-medium transition-colors"
+                href={link.href}
+                onClick={(e) => handleNavClick(e, link.href)}
+                className="text-foreground/80 hover:text-primary font-medium transition-colors cursor-pointer"
               >
                 {link.name}
-              </Link>
+              </a>
             ))}
           </div>
 
@@ -61,14 +79,14 @@ const Navbar = () => {
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.name}
-                  to={link.href}
-                  className="text-foreground/80 hover:text-primary font-medium py-2 transition-colors"
-                  onClick={() => setIsOpen(false)}
+                  href={link.href}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  className="text-foreground/80 hover:text-primary font-medium py-2 transition-colors cursor-pointer"
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
               <div className="flex flex-col gap-3 pt-4 border-t border-border">
                 <Button variant="outline" asChild>
