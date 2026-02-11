@@ -7,7 +7,7 @@ const PennantFlags = () => {
       {/* First row of pennants */}
       <svg
         viewBox="0 0 1200 90"
-        className="w-full h-16 md:h-20"
+        className="w-full h-20 md:h-28"
         preserveAspectRatio="none"
       >
         {/* String line - natural draping curve */}
@@ -29,7 +29,7 @@ const PennantFlags = () => {
           return (
             <g key={`f1-${i}`} className="animate-[sway_4s_ease-in-out_infinite]" style={{ animationDelay: `${i * 0.15}s`, transformOrigin: `${x}px ${y}px` }}>
               <polygon
-                points={`${x - 14},${y} ${x + 14},${y} ${x + rotation * 0.5},${y + 28}`}
+                points={`${x - 18},${y} ${x + 18},${y} ${x + rotation * 0.5},${y + 36}`}
                 fill={color}
                 opacity={0.75}
               />
@@ -41,7 +41,7 @@ const PennantFlags = () => {
       {/* Second row - offset, slightly smaller */}
       <svg
         viewBox="0 0 1200 80"
-        className="w-full h-10 md:h-14 -mt-6"
+        className="w-full h-14 md:h-20 -mt-6"
         preserveAspectRatio="none"
       >
         <path
@@ -60,7 +60,7 @@ const PennantFlags = () => {
           return (
             <g key={`f2-${i}`} className="animate-[sway_4s_ease-in-out_infinite]" style={{ animationDelay: `${i * 0.18 + 0.3}s`, transformOrigin: `${x}px ${y}px` }}>
               <polygon
-                points={`${x - 12},${y} ${x + 12},${y} ${x + rotation * 0.4},${y + 24}`}
+                points={`${x - 16},${y} ${x + 16},${y} ${x + rotation * 0.4},${y + 30}`}
                 fill={color}
                 opacity={0.65}
               />
