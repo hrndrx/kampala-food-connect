@@ -8,7 +8,7 @@ import CTASection from "@/components/sections/CTASection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ConnectSection from "@/components/sections/ConnectSection";
 import PennantFlags from "@/components/decorations/PennantFlags";
-import Balloons from "@/components/decorations/Balloons";
+
 import GrandOpeningBanner from "@/components/decorations/GrandOpeningBanner";
 
 const Index = () => {
@@ -16,7 +16,7 @@ const Index = () => {
     <div className="min-h-screen relative">
       <GrandOpeningBanner />
       <PennantFlags />
-      <Balloons />
+      
       <Navbar />
       <main>
         <HeroSection />
