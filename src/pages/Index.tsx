@@ -16,7 +16,7 @@ const Index = () => {
     <div className="min-h-screen relative">
       <GrandOpeningBanner />
       <PennantFlags />
-      <Balloons />
+      
       <Navbar />
       <main>
         <HeroSection />
